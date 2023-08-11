@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from "react";
-import './InputOption.css'
+import './styles/InputOption.css'
 const InputOption=(props)=> {
     const [activeOption, setactiveOption] = useState("Menu");
     const [active, setActive] = useState(true);
