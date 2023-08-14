@@ -1,0 +1,20 @@
+.slider{
+    position:absolute;
+    height:1rem;
+    width:2rem;
+    border-radius:1rem;
+    background-color:black;
+   
+}
+.dot{
+    position:absolute;
+    border-radius:50%;
+    width:1rem;
+    height:1rem;
+    transition:ease-out 0.2s;
+    
+}
+
+.dot:hover,.slider:hover{
+    cursor:pointer;
+}

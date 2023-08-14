@@ -3,25 +3,19 @@
     src: url('./head.otf');
 }
 .optionBar {
-    
     font-family: head;
-    font-size: large;
-    height:1.8rem;
-    color: cornflowerblue;
-    border-style:hidden;
+    font-size: 1rem;
+    height: 1.8rem;
+    color: #3076f3;
+    border-style: hidden;
     background-color: snow;
-    transition:all 0.1s;
+    transition: all 0.1s;
 }
-    .optionBar:hover{
-        background-color: #76a4f6;
-        box-shadow: 0px 3px 3px 3px #d6edffab;
-        color: snow;
-        transform: scale(103%);
-        transition: all 0.1s;
+    .optionBar:hover, .optionBar:focus{
         cursor: pointer;
+        color: #065af1;
+        background-color: aliceblue;
+        box-shadow: 0px 0px 3px 0.2px #2377dd;
+        transform: translateY(-1px);
     }
-    .optionBar:active {
-        background-color: #76a4f6;
-        box-shadow: 0px 3px 3px 3px #d6edffab;
-        color: snow;
-    }
+    

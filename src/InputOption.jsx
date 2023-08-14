@@ -6,6 +6,7 @@ const InputOption=(props)=> {
     const [active, setActive] = useState(true);
     const [buttonList, setbuttonList] = useState([]);
     const showOptions = () => {
+        alert(props.theme);
         if (active) { setActive(false); setbuttonList(["Idli", "Dosa", "samosa", "friedRice"]); } else { setActive(true); setbuttonList([]); }
     }
     return (
