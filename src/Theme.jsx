@@ -7,8 +7,8 @@ const Theme = (props) => {
     const { top, left } = props.style;
     const [position, setPosition] = useState({ top, left });
     const [theme, setTheme] = useState("white");
-    const [sliderStyle, setSliderStyle] = useState({ backgroundColor:'#111111'})
-    const [dotPosition, setDotPosition] = useState({ left: '0rem', backgroundColor:'#3b8cff'});
+    const [sliderStyle, setSliderStyle] = useState({ backgroundColor:'snow'})
+    const [dotPosition, setDotPosition] = useState({ left: '1rem', backgroundColor:'#3b8cff'});
     const changeTheme = () => {
         if (theme == "black") {
             setTheme("white")
@@ -18,7 +18,7 @@ const Theme = (props) => {
         } else {
             setTheme("black");
             setDotPosition({ ...dotPosition, left: '0rem' });
-            setSliderStyle({ backgroundColor: '#111111'});
+            setSliderStyle({ backgroundColor: '#0f1321'});
         }            
     }
     return (

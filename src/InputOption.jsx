@@ -1,22 +1,35 @@
 import React from 'react';
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import './styles/InputOption.css'
 const InputOption=(props)=> {
     const [activeOption, setactiveOption] = useState("Menu");
     const [active, setActive] = useState(true);
     const [buttonList, setbuttonList] = useState([]);
+
+    const [theme, setTheme] = useState({ backgroundColor: 'snow', color: '#3076f3' });
+    useEffect(() => {
+        if (props.theme == "white") {
+            setTheme({ backgroundColor: 'snow', color: '#3076f3' });
+        } else {
+            setTheme({ backgroundColor: '#0f1321', color: '#3076f3' });
+        }
+    }, [props.theme]);
+
     const showOptions = () => {
-        alert(props.theme);
         if (active) { setActive(false); setbuttonList(["Idli", "Dosa", "samosa", "friedRice"]); } else { setActive(true); setbuttonList([]); }
     }
     return (
-        <div style={props.style}>
-            <button class="optionBar" onClick={showOptions}>{activeOption}</button>
+        <>
+           
+        <div style={props.style }>
+            <button class="optionBar" style={ theme } onClick={showOptions}>{activeOption}</button>
+
             {buttonList.map((buttonName, index) => (
-                <button class="optionBar" key={index} onClick={() => { setactiveOption(buttonName); setbuttonList([]); setActive(true) }}>{buttonName}</button>
+                <button class="optionBar" style={ theme } key={index} onClick={() => { setactiveOption(buttonName); setbuttonList([]); setActive(true) }}>{buttonName}</button>
             ))
             }
-        </div>
+            </div>
+        </>
     );
 }
 export default InputOption;
