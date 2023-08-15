@@ -11,7 +11,7 @@ const InputOption=(props)=> {
         if (props.theme == "white") {
             setTheme({ backgroundColor: 'snow', color: '#3076f3' });
         } else {
-            setTheme({ backgroundColor: '#0f1321', color: '#3076f3' });
+            setTheme({ backgroundColor: '#1f2434', color: '#3076f3' });
         }
     }, [props.theme]);
 

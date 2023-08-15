@@ -13,7 +13,7 @@
     font-size: 1rem;
     text-indent: 0.6rem;
     border-style:hidden;
-    transition: all 0.5s;
+    transition: all 0.1s;
 }
     .inputClass:hover, .inputClass:focus {
         outline: none;

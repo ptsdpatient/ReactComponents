@@ -7,7 +7,7 @@ import Theme from './Theme';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <>
-        <Theme style={{ top: '10rem', left: '20rem' }} />
+        <Theme />
  
    </>
 );

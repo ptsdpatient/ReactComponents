@@ -1,23 +1,36 @@
 import React from 'react';
-
+import './styles/App.css'
 import InputOption from './InputOption';
 import Input from './Input';
-import { useEffect } from 'react';
+import { useEffect,useState} from 'react';
 
 const App = ({ theme }) => {
+    const [canvasTheme, setCanvasTheme] = useState({ backgroundColor: 'snow' });
     useEffect(() => {
         if (theme == "white") {
             document.body.style.backgroundColor = "#dedede";
+            setCanvasTheme({ backgroundColor: 'snow' });
         } else {
             document.body.style.backgroundColor = "black";
+            setCanvasTheme({ backgroundColor:'#1f2434'});
         }
     }, [theme])
+
+
     return (
         <>
-
-            <InputOption theme={theme} style={{ position: 'relative', display: 'flex', flexDirection: 'column', width: '8rem', top: '10rem' }} />
-            <Input theme={theme} />
-           
+            <div class="canvaContainer">
+                <canvas style={{...canvasTheme}}>
+                </canvas>
+                <canvas style={{ ...canvasTheme }}>
+                </canvas>
+                <canvas style={{ ...canvasTheme }}>
+                </canvas>
+                <canvas style={{...canvasTheme }}>
+                </canvas>
+                <canvas style={{ ...canvasTheme }}>
+                </canvas>
+            </div>
         </>
     );
 }
