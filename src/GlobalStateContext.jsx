@@ -13,5 +13,5 @@ export const GlobalStateProvider = ({ children }) => {
 };
 
 export const useGlobalState = () => { return useContext(GlobalStateContext); }
-    //return useContext(GlobalStateContext);
+
 
