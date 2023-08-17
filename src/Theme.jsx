@@ -23,7 +23,7 @@ const Theme = (props) => {
     
     
     const changeTheme = () => {
-        if (theme == "black") {
+        if (theme === "black") {
             console.log("black")
             setTheme("white");
             setThemeIcon("🌞");
@@ -78,7 +78,7 @@ const Theme = (props) => {
         return (<>
             <div id="header" style={{ ...headerStyle, height: '4.3rem', width: '100%', position:'fixed'}} >
                 <div style={{height:'4.3rem',width:'100%',display:'flex',justifyContent:'space-between'} }>
-                    <div class="headTitle" style={{marginLeft:'1rem',marginTop:'0.5rem'} }>T4NISHQ</div>
+                    <div class="headTitle" style={{ marginLeft: '1rem', marginTop: '0.5rem' }} onClick={() => {window.location.reload()} }>T4NISHQ</div>
                 <div>
                 <div class="slider" style={{ ...sliderStyle, position: 'relative', top: '1.3rem' }} onClick={changeTheme}><div class="dot" style={dotPosition} ></div></div>
                 <p class="themeicon" style={{ position:'relative',margin:'auto',marginLeft:'3rem',marginTop:'-0.8rem'}}>{themeIcon}</p>
@@ -90,7 +90,7 @@ const Theme = (props) => {
 
             <div style={{ ...mobileMenuStyle, position: 'fixed', top: '4.3rem', left: '0rem', width: '100%' }} onClick={() => {handleMobileMenu() } }>
                 <div style={{ width: '100%', height: '50rem', backgroundColor: theme === 'white' ? 'snow' : '#1f2434' } }>
-                    <div class="iconList" style={{margin:'auto',marginTop:'1.7rem',width:'80%',justifyContent:'space-between'} }><img src={githubIcon}></img><img src={linkedinIcon}></img><img src={instagramIcon}></img><img src={whatsappIcon}></img><img src={youtubeIcon}></img><img src={discordIcon}></img></div>
+                    <div class="iconList" style={{ margin: 'auto', marginTop: '1.7rem', width: '80%', justifyContent: 'space-between' }}><img src={githubIcon} onClick={() => { window.open("https://github.com/ptsdpatient") }}></img><img src={linkedinIcon} onClick={() => { window.open("https://www.linkedin.com/in/tanishq-dhote-0a6a72262/") }}></img><img src={instagramIcon} onClick={() => { window.open("https://www.instagram.com/ptsd_memer/") }}></img><img src={whatsappIcon} onClick={() => { window.open("https://wa.me/9359721860") }}></img><img src={youtubeIcon} onClick={() => { window.open("https://www.youtube.com/channel/UCKboTJN962q_1sJ5_FpqYBQ") }}></img><img src={discordIcon} onClick={() => { window.open("https://discord.gg/yAp9M4CgYS") }}></img></div>
                     <div class="container" style={{ flexDirection: 'column', margin: 'auto', marginTop: '2.5rem' }}>{pointerList.map((textname, key) => (<p class="underline-paragraph" key={key} onClick={() => { jumpPage(textname);handleMobileMenu() }}>{textname}/</p>))}</div>
                 
                 </div>
@@ -104,12 +104,12 @@ const Theme = (props) => {
         return (<>
             <div id="header" style={{ ...headerStyle, height: '4.3rem', width: '100rem', position: 'fixed' }} >
                 <div style={{height:'4.3rem',width:'100rem',position:'fixed',display:'flex'} }>
-                    <div class="headTitle" style={{marginLeft:'1.5rem',marginTop:'0.5rem'} }>T4NISHQ</div>
-                    <div class="iconList" style={{position:'absolute',left:'11rem',marginTop:'0.8rem'} }><img src={githubIcon}></img><img src={linkedinIcon}></img><img src={instagramIcon}></img><img src={whatsappIcon}></img><img src={youtubeIcon}></img><img src={discordIcon}></img></div>
+                    <div class="headTitle" style={{ marginLeft: '1.5rem', marginTop: '0.5rem' }} onClick={() => { window.location.reload() }}>T4NISHQ</div>
+                    <div class="iconList" style={{ position: 'absolute', left: '11rem', marginTop: '0.8rem' }}><img src={githubIcon} onClick={() => { window.open("https://github.com/ptsdpatient") }}></img><img src={linkedinIcon} onClick={() => { window.open("https://www.linkedin.com/in/tanishq-dhote-0a6a72262/") }}></img><img src={instagramIcon} onClick={() => { window.open("https://www.instagram.com/ptsd_memer/") }}></img><img src={whatsappIcon} onClick={() => { window.open("https://wa.me/9359721860") }}></img><img src={youtubeIcon} onClick={() => { window.open("https://www.youtube.com/channel/UCKboTJN962q_1sJ5_FpqYBQ") }}></img><img src={discordIcon} onClick={() => { window.open("https://discord.gg/yAp9M4CgYS") } }></img></div>
                     <div class="container" style={{position:'absolute',left:'31.5rem',marginTop:'0.4rem'} }>{pointerList.map((textname, key) => (<p class="underline-paragraph" key={key} onClick={() => { jumpPage(textname) }}>{textname}/</p>))}</div>
-                    <div style={{position:'absolute',left:'65rem'} }>
+                    <div style={{position:'absolute',left:'64rem',top:'0.3rem'} }>
                       <div class="slider" style={{ ...sliderStyle ,position: 'relative', top: '1.3rem' }} onClick={changeTheme}><div class="dot" style={dotPosition} ></div></div>
-                      <p class="themeicon" style={{ margin: 'auto', marginLeft: '3rem', marginTop: '-0.8rem' }}>{themeIcon}</p>
+                      <p class="themeicon" style={{ margin: 'auto', marginLeft: '3.5rem', marginTop: '-1rem' }}>{themeIcon}</p>
                 </div>
                 </div>
             </div>
